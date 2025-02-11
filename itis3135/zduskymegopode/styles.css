@@ -1,0 +1,117 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f3e9; 
+    color: #333333; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+header {
+    background-color: #174a5b; 
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #f4a261; 
+}
+
+/* Main Content */
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+
+.intro, .contact {
+    background: #ffffff; 
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+    border-left: 8px solid #f4a261; 
+}
+
+.intro:hover, .contact:hover {
+    transform: scale(1.02);
+}
+
+.intro h2, .contact h2 {
+    font-size: 2em;
+    color: #174a5b; 
+    margin-bottom: 15px;
+}
+
+/* Slogan Section */
+.slogan-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.slogan {
+    font-size: 1.5em;
+    font-style: italic;
+    color: white;
+    background: #f4a261; 
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #174a5b; 
+    color: white;
+    padding: 15px;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 10px;
+    margin: 40px auto;
+    font-size: 0.9em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+footer:hover {
+    transform: scale(1.02);
+}
