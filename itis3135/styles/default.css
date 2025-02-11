@@ -3,11 +3,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #d6eaf8; /* Softer blue background */
+    background-color: #d6eaf8; /* Soft blue */
     color: #333;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    min-height: 100vh;
 }
 
 /* Header */
@@ -41,16 +41,25 @@ nav a:hover {
     color: #f4a261; /* Orange-gold accent */
 }
 
-/* Welcome Card */
+/* Main Content */
+main {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Welcome Card (Now Full Width with Margins) */
 .welcome-card {
     background: white;
-    padding: 20px;
-    margin: 40px auto;
-    width: 90%;
-    max-width: 600px;
+    padding: 25px;
+    width: 90%; /* Makes it extend close to full width but keeps margin */
+    max-width: 1200px; /* Prevents it from being too wide on large screens */
     text-align: center;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    margin-top: 30px; /* Moves it toward the top */
 }
 
 .welcome-card h2 {
@@ -70,9 +79,6 @@ footer {
     background: #154360;
     color: white;
     padding: 15px;
-    width: 90%;
-    max-width: 800px;
-    border-radius: 10px;
-    margin: 40px auto;
-    font-size: 0.9em;
+    width: 100%;
+    margin-top: auto;
 }
