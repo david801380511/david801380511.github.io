@@ -50,27 +50,16 @@ main {
     align-items: center;
 }
 
-/* Welcome Card (Now Full Width with Margins) */
-.welcome-card {
+/* Section Styling (for Contract and Introduction) */
+.section-card {
     background: white;
-    padding: 25px;
-    width: 90%; /* Makes it extend close to full width but keeps margin */
+    padding: 30px;
+    width: 90%; /* Stretches it almost full width */
     max-width: 1200px; /* Prevents it from being too wide on large screens */
     text-align: center;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    margin-top: 30px; /* Moves it toward the top */
-}
-
-.welcome-card h2 {
-    color: #154360;
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-.welcome-card p {
-    font-size: 1.2em;
-    margin-top: 5px;
+    margin-top: 20px; /* Moves it closer to the top */
 }
 
 /* Footer */
