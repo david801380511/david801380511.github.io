@@ -71,3 +71,21 @@ footer {
     width: 100%;
     margin-top: auto;
 }
+
+/* Image Styling */
+figure {
+    text-align: center;
+    margin-top: 20px;
+}
+
+figure img {
+    width: 500px; /* Reduced size */
+    max-width: 100%; /* Ensures responsiveness */
+    border-radius: 59px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+figcaption {
+    margin-top: 5px;
+    font-style: italic;
+}
