@@ -26,6 +26,38 @@
       overflow: hidden;
     }
 
+    header .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.2s forwards;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .float-me {
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      width: 80px;
+      height: 80px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      animation: float 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-20px); }
+    }
+
     .container {
       width: 90%;
       max-width: 1350px;
@@ -83,15 +115,16 @@
     }
 
     footer nav a:hover {
-      color: gold;
+      color: #e63946;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Hello, I'm David Mekhaeil</h1>
-    <p>This is my personal website, built to showcase my projects and creativity.</p>
+    <div class="float-me"></div>
+    <h1 class="fade-in">Hello, I'm David Mekhaeil</h1>
+    <p class="fade-in" style="animation-delay: 0.4s;">This is my personal website, built to showcase my projects and creativity.</p>
   </header>
 
   <main class="container">
@@ -109,7 +142,7 @@
       <div class="highlights">
         <div class="highlight-card">
           <h3>Student Projects</h3>
-          <p>Assignments and various coursework to show my progress.</p>
+          <p>JavaScript assignments and coursework to show my progress.</p>
         </div>
         <div class="highlight-card">
           <h3>GitHub Repositories</h3>
@@ -134,4 +167,3 @@
   </footer>
 </body>
 </html>
-
