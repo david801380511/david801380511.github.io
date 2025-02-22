@@ -195,16 +195,47 @@ love learning from other developers. In my free time, I read about the latest we
   </main>
 
   <footer>
-    <nav>
-      <a href="https://webpages.charlotte.edu/dmekhaei/">Charlotte.edu</a> ~
-      <a href="https://github.com/david801380511">GitHub</a> ~
-      <a href="https://david801380511.github.io">GitHub.io</a> ~
-      <a href="http://www.linkedin.com/in/davidhmekhaeil">LinkedIn</a>
+    <nav style="margin-bottom: 10px;">
+      <a href="https://webpages.charlotte.edu/dmekhaei/" class="footer-link">Charlotte.edu</a> ~
+      <a href="https://github.com/david801380511" class="footer-link">GitHub</a> ~
+      <a href="https://david801380511.github.io" class="footer-link">GitHub.io</a> ~
+      <a href="http://www.linkedin.com/in/davidhmekhaeil" class="footer-link">LinkedIn</a>
     </nav>
     <div style="display: flex; justify-content: center; align-items: center; height: 40px;">
-      <p style="margin: 0;">Page Built by David Mekhaeil © 2025</p>
+      <p style="margin: 0; font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 500;">
+        Page Built by David Mekhaeil © 2025
+      </p>
     </div>
   </footer>
+
+  <style>
+    /* Footer Links Styling */
+    .footer-link {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #343a40;
+      text-decoration: underline;
+      transition: color 0.3s ease-in-out;
+      margin: 0 12px;
+    }
+
+    /* Hover Effect */
+    .footer-link:hover {
+      color: #ff5733;
+    }
+
+    /* Active Click Effect */
+    .footer-link:active {
+      color: #d42e00;
+    }
+
+    /* Prevent Default Purple for Visited Links */
+    .footer-link:visited {
+      color: #343a40;
+    }
+  </style>
+
 
 </body>
 </html>
