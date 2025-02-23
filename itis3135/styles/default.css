@@ -37,7 +37,7 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-    color: #f4a261; /* Orange-gold accent */
+    color: #f4a261; 
 }
 
 
@@ -47,6 +47,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 20px; 
 }
 
 
@@ -61,6 +62,13 @@ main {
     margin-top: 20px; 
 }
 
+.bubble {
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 footer {
     text-align: center;
@@ -72,12 +80,12 @@ footer {
 }
 
 footer p a {
-    color: #ffcc00; /* Yellow */
+    color: #ffcc00; 
     font-weight: bold;
 }
 
 footer p a:hover {
-    color: #000000; /* Reddish-orange */
+    color: #000000; 
     text-decoration: underline;
 }
 
