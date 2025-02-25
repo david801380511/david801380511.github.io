@@ -43,7 +43,7 @@ a {
 a:hover {
     color: goldenrod;
 }
-a:visited {
+main a:visited {
     color: #4e54c8;
 }
 main {
