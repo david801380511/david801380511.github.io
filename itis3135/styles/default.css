@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #d6eaf8; /* Soft blue */
+    background-color: #d6eaf8;
     color: #333;
     display: flex;
     flex-direction: column;
@@ -36,32 +36,35 @@ nav a:hover {
     text-decoration: underline;
     color: #f4a261; 
 }
+a {
+    color: #1d3557;
+    text-decoration: none;
+}
+a:hover {
+    color: goldenrod;
+}
+a:visited {
+    color: #4e54c8;
+}
 main {
     width: 100%;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px; 
+    padding-top: 20px;
 }
-.section-card {
+section {
+    font-size: 1.2em;
+    width: 90%;
+    max-width: 1200px;
+    text-align: left;
     background: white;
     padding: 30px;
-    max-width: 1200px; 
-    text-align: center;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    margin-top: 20px; 
-    width: 90%;
-}
-.bubble {
-    border: 2px solid #ccc;
-    border-radius: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 1300px;
-    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 footer {
     text-align: center;
@@ -84,8 +87,8 @@ figure {
     margin-top: 20px;
 }
 figure img {
-    width: 500px; 
-    max-width: 100%; 
+    width: 500px;
+    max-width: 100%;
     border-radius: 59px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
