@@ -2,9 +2,10 @@ html {
     box-sizing: border-box;
 }
 
-*, *::before, *::after {
+body, div, section, header, footer, main, figure, img, ul, li, h1, h2, h3, h4, p, a, nav, button, input, textarea, form {
     box-sizing: inherit;
 }
+
 
 body {
     font-family: Arial, sans-serif;
