@@ -1,3 +1,11 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,11 +15,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    box-sizing: border-box;
 }
-*, *::before, *::after {
-    box-sizing: inherit;
-}
+
 header {
     background-color: #154360;
     color: white;
@@ -19,33 +24,41 @@ header {
     padding: 20px;
     width: 100%;
 }
+
 h1 {
     margin: 10px;
     font-size: 2.2em;
 }
+
 nav {
     margin-top: 10px;
 }
+
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     margin: 0 20px;
 }
+
 nav a:hover {
     text-decoration: underline;
     color: #f4a261; 
 }
+
 a {
     color: #1d3557;
     text-decoration: none;
 }
+
 a:hover {
     color: goldenrod;
 }
+
 main a:visited {
     color: #4e54c8;
 }
+
 main {
     width: 100%;
     flex-grow: 1;
@@ -54,6 +67,7 @@ main {
     align-items: center;
     padding-top: 20px;
 }
+
 section {
     font-size: 1.2em;
     width: 90%;
@@ -65,7 +79,9 @@ section {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     margin-top: 20px;
     margin-bottom: 30px;
+    box-sizing: border-box; /* Ensures padding doesn't increase width */
 }
+
 footer {
     text-align: center;
     background: #154360;
@@ -74,24 +90,29 @@ footer {
     width: 100%;
     margin-top: auto;
 }
+
 footer p a {
     color: #ffcc00; 
     font-weight: bold;
 }
+
 footer p a:hover {
     color: #000000; 
     text-decoration: underline;
 }
+
 figure {
     text-align: center;
     margin-top: 20px;
 }
+
 figure img {
     width: 500px;
     max-width: 100%;
     border-radius: 59px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 figcaption {
     margin-top: 5px;
     font-style: italic;
