@@ -1,3 +1,7 @@
+:root {
+    --h1-font-size: 2.2em;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -5,7 +9,6 @@ html {
 body, div, section, header, footer, main, figure, img, ul, li, h2, h3, h4, p, a, nav, button, input, textarea, form {
     box-sizing: inherit;
 }
-
 
 body {
     font-family: Arial, sans-serif;
@@ -27,7 +30,7 @@ header {
 
 h1 {
     margin: 10px;
-    font-size: 2.2em;
+    font-size: var(--h1-font-size);
 }
 
 nav {
@@ -118,6 +121,10 @@ figcaption {
 
 /* Tablet styles */
 @media (min-width: 601px) and (max-width: 980px) {
+    :root {
+        --h1-font-size: 2em;
+    }
+
     nav {
         padding: 10px 0;
     }
@@ -130,14 +137,14 @@ figcaption {
         padding: 20px;
         font-size: 1.1em;
     }
-
-    h1 {
-        font-size: 2em;
-    }
 }
 
 /* Mobile styles */
 @media (min-width: 370px) and (max-width: 600px) {
+    :root {
+        --h1-font-size: 1.8em;
+    }
+
     header {
         padding: 15px;
     }
@@ -149,10 +156,6 @@ figcaption {
     nav a {
         display: block;
         margin: 8px 0;
-    }
-
-    h1 {
-        font-size: 1.8em;
     }
 
     section {
