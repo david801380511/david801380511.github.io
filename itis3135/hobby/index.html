@@ -137,11 +137,10 @@
         }
 
         .author-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            row-gap: 15px;
-            column-gap: 15px;
-            margin: 20px 0;
+        display: flex;
+        flex-wrap: wrap; /* Allows items to move to new rows */
+        gap: 15px; /* Adds spacing between items */
+        margin: 20px 0;
         }
 
         .author-card {
