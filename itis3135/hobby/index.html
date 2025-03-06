@@ -138,18 +138,13 @@
 
         .author-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            padding: 1rem;
-            list-style: none;
-            margin: 0;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 15px;
+            column-gap: 15px;
+            margin: 20px 0;
         }
 
         .author-card {
-            background: rgba(30, 30, 50, 0.6);
-            border: 1px solid #4e54c8;
-            border-radius: 10px;
-            padding: 1rem;
             text-align: center;
         }
 
@@ -158,18 +153,12 @@
             max-width: 250px;
             height: auto;
             border-radius: 10px;
-            margin-bottom: 1rem;
-        }
-
-        .author-card h3 {
-            margin: 0.5rem 0;
-            color: #e0e0e0;
+            margin-bottom: 10px;
         }
 
         .author-card p {
-            margin: 0.5rem 0;
+            margin: 5px 0;
             font-style: italic;
-            color: #a0a0a0;
         }
 
         select {
@@ -271,28 +260,28 @@
         <section id="who">
             <h2>Popular Authors</h2>
             <p>Some of the most influential manga and manhwa authors have shaped the industry with their storytelling.</p>
-            <ul class="author-grid">
-                <li class="author-card">
+            <div class="author-grid">
+                <div class="author-card">
                     <img src="images/masashi-kishimoto.png" alt="Masashi Kishimoto">
-                    <h3>Masashi Kishimoto</h3>
-                    <p>Creator of Naruto</p>
-                </li>
-                <li class="author-card">
-                    <img src="images/Hiromu-Arakawa.jpg" alt="Hiromu Arakawa">
-                    <h3>Hiromu Arakawa</h3>
-                    <p>Creator of Fullmetal Alchemist</p>
-                </li>
-                <li class="author-card">
-                    <img src="images/turtleMe.jpg" alt="TurtleMe">
-                    <h3>TurtleMe</h3>
-                    <p>Creator of The Beginning After the End</p>
-                </li>
-                <li class="author-card">
+                    <p>Masashi Kishimoto</p>
+                    <p><em>Creator of Naruto</em></p>
+                </div>
+                <div class="author-card">
+                    <img src="images/Hiromu-Arakawa.jpg" alt="Gege Akutami">
+                    <p>Hiromu-Arakawa</p>
+                    <p><em>Creator of Fullmetal Alchemist</em></p>
+                </div>
+                <div class="author-card">
+                    <img src="images/turtleMe.jpg" alt="Chugong">
+                    <p>TurtleMe</p>
+                    <p><em>Creator of The Beginning After the End</em></p>
+                </div>
+                <div class="author-card">
                     <img src="images/eiichiro-oda.jpg" alt="Eiichiro Oda">
-                    <h3>Eiichiro Oda</h3>
-                    <p>Creator of One Piece</p>
-                </li>
-            </ul>
+                    <p>Eiichiro Oda</p>
+                    <p><em>Creator of One Piece</em></p>
+                </div>
+            </div>
         </section>
         
         <section id="when">
