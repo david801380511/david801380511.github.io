@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga & Manhwa Journey | David Mekhaeil</title>
+    <link rel="icon" type="image/x-icon" href="images/manga.ico">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: rgba(30, 30, 50, 0.95);
+            border-bottom: 2px solid #4e54c8;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #4e54c8;
+            color: #fff;
+        }
+
+        .nav-divider {
+            color: #4e54c8;
+            margin: 0 8px;
+        }
+
+        section {
+            display: none;
+            background: rgba(30, 30, 50, 0.8);
+            border: 1px solid #4e54c8;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px auto;
+            max-width: 800px;
+            backdrop-filter: blur(10px);
+        }
+
+        section.active {
+            display: block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #4e54c8;
+            text-align: left;
+        }
+
+        th {
+            background: #4e54c8;
+            color: white;
+        }
+
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        figure img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(78, 84, 200, 0.3);
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #a0a0a0;
+        }
+
+        form {
+            display: grid;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        input, textarea {
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #4e54c8;
+            border-radius: 4px;
+            color: #fff;
+        }
+
+        button {
+            background: #4e54c8;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #6c71db;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(30, 30, 50, 0.95);
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #4e54c8;
+        }
+
+        .author-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .author-card {
+            text-align: center;
+        }
+
+        .author-card img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .author-card p {
+            margin: 5px 0;
+            font-style: italic;
+        }
+
+        select {
+            padding: 10px;
+            background: rgba(30, 30, 50, 0.9);
+            border: 1px solid #4e54c8;
+            border-radius: 4px;
+            color: #e0e0e0;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%234e54c8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 16px;
+        }
+
+        select:hover {
+            border-color: #6c71db;
+            background-color: rgba(40, 40, 60, 0.9);
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #6c71db;
+            box-shadow: 0 0 0 2px rgba(78, 84, 200, 0.2);
+        }
+
+        select option {
+            background: rgba(30, 30, 50, 0.95);
+            color: #e0e0e0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Manga & Manhwa Reading Journey</h1>
+        <nav>
+            <a href="#home" onclick="showSection('home')">Overview</a>
+            <span class="nav-divider">📖</span>
+            <a href="#who" onclick="showSection('who')">Popular Authors</a>
+            <span class="nav-divider">📖</span>
+            <a href="#when" onclick="showSection('when')">Reading Timeline</a>
+            <span class="nav-divider">📖</span>
+            <a href="#where" onclick="showSection('where')">Reading Platforms</a>
+            <span class="nav-divider">📖</span>
+            <a href="#how" onclick="showSection('how')">Getting Started</a>
+            <span class="nav-divider">📖</span>
+            <a href="#why" onclick="showSection('why')">Why Manga/Manhwa</a>
+            <span class="nav-divider">🤖</span>
+            <a href="#ai" onclick="showSection('ai')">AI Prompts</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="active">
+            <h2>Manga & Manhwa Overview</h2>
+            <table>
+                <tr>
+                    <th>Category</th>
+                    <th>Popular Series</th>
+                    <th>Reading Status</th>
+                </tr>
+                <tr>
+                    <td>Manga</td>
+                    <td>Vinland Saga, Jujutsu Kaisen, Tokyo Ghoul</td>
+                    <td>Completed</td>
+                </tr>
+                <tr>
+                    <td>Manhwa</td>
+                    <td>Solo Leveling, The Boxer</td>
+                    <td>Completed</td>
+                </tr>
+                <tr>
+                    <td>Light Novels</td>
+                    <td>Classroom of the Elite, The Beginning After the End</td>
+                    <td>Reading</td>
+                </tr>
+            </table>
+
+            <figure>
+                <img src="images/manga-collection.png" alt="Digital Manga Reading Setup" style="width: 75%;">
+                <figcaption>My Digital Manga Reading Setup</figcaption>
+            </figure>
+            <p><em>AI Prompt used: "Create a cozy reading corner with a tablet displaying manga, surrounded by physical manga volumes, with warm lighting and Japanese decorative elements"</em></p>
+
+            <form class="interest-form">
+                <h3>Join Our Manga/Manhwa Community</h3>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <textarea placeholder="What are your favorite manga or manhwa series?" rows="4"></textarea>
+                <button type="submit">Connect With Fellow Readers</button>
+            </form>
+        </section>
+
+        <section id="who">
+            <h2>Popular Authors</h2>
+            <p>Some of the most influential manga and manhwa authors have shaped the industry with their storytelling.</p>
+            <div class="author-grid">
+                <div class="author-card">
+                    <img src="images/masashi-kishimoto.png" alt="Masashi Kishimoto">
+                    <p>Masashi Kishimoto</p>
+                    <p><em>Creator of Naruto</em></p>
+                </div>
+                <div class="author-card">
+                    <img src="images/Hiromu-Arakawa.jpg" alt="Gege Akutami">
+                    <p>Hiromu-Arakawa</p>
+                    <p><em>Creator of Fullmetal Alchemist</em></p>
+                </div>
+                <div class="author-card">
+                    <img src="images/turtleMe.jpg" alt="Chugong">
+                    <p>TurtleMe</p>
+                    <p><em>Creator of The Beginning After the End</em></p>
+                </div>
+                <div class="author-card">
+                    <img src="images/eiichiro-oda.jpg" alt="Eiichiro Oda">
+                    <p>Eiichiro Oda</p>
+                    <p><em>Creator of One Piece</em></p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="when">
+            <h2>Reading Timeline</h2>
+            <p>Reading manga and manhwa can be a lifelong journey. Here’s a typical timeline for discovering new series.</p>
+            <table>
+                <tr>
+                    <th>Stage</th>
+                    <th>Popular Series</th>
+                </tr>
+                <tr>
+                    <td>Beginner</td>
+                    <td>Naruto, Death Note, Solo Leveling</td>
+                </tr>
+                <tr>
+                    <td>Intermediate</td>
+                    <td>Attack On Titan, Tokyo Ghoul, The Boxer</td>
+                </tr>
+                <tr>
+                    <td>Advanced</td>
+                    <td>Berserk, Vagabond, Vinland Saga</td>
+                </tr>
+            </table>
+            <figure>
+                <img src="images/timeline.jpg" alt="Manga and Manhwa Reading Timeline">
+                <figcaption>How your manga and manhwa journey may evolve over time.</figcaption>
+            </figure>
+        </section>
+        
+        <section id="where">
+            <h2>Reading Platforms</h2>
+            <p>There are many platforms where you can legally read manga and manhwa.</p>
+            <ul>
+                <li><a href="https://www.viz.com/" target="_blank">VIZ Media</a> - Great for official Shonen Jump manga.</li>
+                <li><a href="https://tapas.io/" target="_blank">Tapas</a> - Home to many webcomics and manhwa.</li>
+                <li><a href="https://www.webtoons.com/" target="_blank">Webtoon</a> - One of the best platforms for reading manhwa.</li>
+            </ul>
+            <figure>
+                <img src="images/platforms.jpg" alt="Various manga and manhwa reading platforms">
+                <figcaption>Popular platforms where you can read manga and manhwa legally.</figcaption>
+            </figure>
+        </section>
+        
+        <section id="how">
+            <h2>Getting Started</h2>
+            <p>If you’re new to manga and manhwa, here’s how to get started:</p>
+            <ol>
+                <li>Pick a genre you like (action, romance, horror, etc.).</li>
+                <li>Start with beginner-friendly series like One Piece or Solo Leveling.</li>
+                <li>Explore different platforms like Webtoon or VIZ.</li>
+            </ol>
+            <form onsubmit="recommendManga(event)">
+                <h3>What's your favorite genre?</h3>
+                <select id="genreSelect">
+                    <option value="" disabled selected>Choose a genre...</option>
+                    <option value="Action">Action</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Slice of Life">Slice of Life</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Mystery">Mystery</option>
+                </select>
+                <button type="submit">Submit</button>
+                <p id="recommendation" style="margin-top: 10px; color: #4e54c8; font-style: italic;"></p>
+            </form>
+            <figure>
+                <img src="images/getting-started.png" alt="How to start reading manga and manhwa">
+                <figcaption>Beginner’s guide to entering the world of manga and manhwa.</figcaption>
+            </figure>
+        </section>
+        
+        <section id="why">
+            <h2>Why Read Manga/Manhwa?</h2>
+            <p>There are many reasons why people love reading manga and manhwa:</p>
+            <ul>
+                <li>Immersive storytelling with stunning visuals.</li>
+                <li>Genres for every taste, from action to slice of life.</li>
+                <li>Fast-paced releases, especially with webtoons.</li>
+            </ul>
+            <figure>
+                <img src="images/why-read.jpg" alt="The appeal of manga and manhwa">
+                <figcaption>The unique appeal of manga and manhwa.</figcaption>
+            </figure>
+        </section>
+
+        <section id="ai">
+            <h2>AI Prompts Used</h2>
+            <p>In creating this website, I used AI technology to enhance both the visual elements and user experience. Here's how AI assisted in the development:</p>
+            <ul>
+                <li>
+                    <strong>Image Generation:</strong> Used AI image generation tools to create custom illustrations for the manga collection setup, author portraits, and reading environment visuals. Each image was carefully prompted to maintain consistency with the manga/manhwa theme while ensuring originality.
+                </li>
+                <li>
+                    <strong>CSS Enhancements:</strong> Implemented AI-suggested CSS improvements for smoother transitions and interactive hover effects, creating a more engaging user experience while maintaining the dark theme aesthetic of the manga reading environment.
+                </li>
+                <li>
+                    <strong>Manga Recommendation</strong> Used AI to generate a function that recommends popular manga series based on the user's preferred genre selection. This feature enhances user engagement and provides personalized suggestions for manga enthusiasts.
+            </ul>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>Designed by <a href="../zduskymegopode/">Dusky Megapode Drones</a> © 2024</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        // Recommendation function
+        function recommendManga(event) {
+            event.preventDefault();
+            const recommendations = {
+                'Action': 'One Piece',
+                'Romance': 'Your Lie in April',
+                'Horror': 'Tokyo Ghoul',
+                'Fantasy': 'Fullmetal Alchemist',
+                'Slice of Life': 'March Comes in Like a Lion',
+                'Sci-Fi': 'Steins;Gate',
+                'Mystery': 'Death Note'
+            };
+            
+            const selectedGenre = document.getElementById('genreSelect').value;
+            const recommendation = recommendations[selectedGenre];
+            document.getElementById('recommendation').textContent = `Then you should try ${recommendation}!`;
+        }
+    </script>
+</body>
+</html>
