@@ -23,6 +23,12 @@
             border-bottom: 2px solid #4e54c8;
             padding: 20px;
             text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-sizing: border-box;
         }
 
         nav {
@@ -193,6 +199,11 @@
             background: rgba(30, 30, 50, 0.95);
             color: #e0e0e0;
             padding: 10px;
+        }
+
+        main {
+            margin-top: 160px; 
+            padding: 20px;
         }
     </style>
 </head>
@@ -402,7 +413,16 @@
             sections.forEach((section) => {
                 section.classList.remove('active');
             });
-            document.getElementById(sectionId).classList.add('active');
+            
+            // First hide all sections except the active one to prevent layout shifts
+            requestAnimationFrame(() => {
+                document.getElementById(sectionId).classList.add('active');
+                window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: 'instant'
+                });
+            });
         }
 
         // Recommendation function
