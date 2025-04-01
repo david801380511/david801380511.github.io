@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Mekhaeil's Dusky Megapode || ITIS 3135 BYO Intro</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <style>
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="file"],
+        .form-group textarea {
+            width: 100%;
+            padding: 0.5rem;
+        }
+        .course-entry {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        #introContent {
+            display: none;
+        }
+        .error {
+            color: red;
+            font-size: 0.9rem;
+        }
+    </style>
+    <script src="scripts/survey.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>   
+        <div data-include="components/header.html"></div>
+    </header>
+
+    <main>
+        <h2>BYO Intro</h2>
+        <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+
+        <section id="formSection" class="section-card">
+            <form id="introForm" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required value="David H. Mekhaeil">
+                </div>
+
+                <div class="form-group">
+                    <label for="mascot">Mascot:</label>
+                    <input type="text" id="mascot" name="mascot" required value="Dusky Megapode">
+                </div>
+
+                <div class="form-group">
+                    <label for="image">Image (PNG or JPG only):</label>
+                    <input type="file" id="image" name="image" accept=".jpg,.jpeg,.png" required>
+                    <span class="error" id="imageError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="imageCaption">Image Caption:</label>
+                    <input type="text" id="imageCaption" name="imageCaption" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="personalBg">Personal Background:</label>
+                    <textarea id="personalBg" name="personalBg" required rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="professionalBg">Professional Background:</label>
+                    <textarea id="professionalBg" name="professionalBg" required rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="academicBg">Academic Background:</label>
+                    <textarea id="academicBg" name="academicBg" required rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="webDevBg">Background in Web Development:</label>
+                    <textarea id="webDevBg" name="webDevBg" required rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="platform">Primary Computer Platform:</label>
+                    <input type="text" id="platform" name="platform" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Courses:</label>
+                    <div id="coursesContainer"></div>
+                    <button type="button" onclick="addCourse()">Add Course</button>
+                </div>
+
+                <div class="form-group">
+                    <label for="funnyThing">Funny Thing About You:</label>
+                    <textarea id="funnyThing" name="funnyThing" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="anything">Anything Else:</label>
+                    <textarea id="anything" name="anything" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="agreement" name="agreement" required>
+                        I understand that what is on this page is not password protected and I will not put anything here that I don't want publicly available.
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset" onclick="resetForm()">
+                </div>
+            </form>
+        </section>
+
+        <section id="introContent" class="section-card">
+            <!-- Generated content will go here -->
+            <button onclick="resetForm()">Create Another Intro</button>
+        </section>
+    </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
