@@ -66,7 +66,7 @@ function handleSubmit(event) {
             <li><strong>Courses:</strong>
                 <ul>
                     ${Array.from(form.querySelectorAll('input[name="courses[]"]'))
-                        .map(input => `<li>${input.value}</li>`)
+                        .map((input) => `<li>${input.value}</li>`)
                         .join('')}
                 </ul>
             </li>
