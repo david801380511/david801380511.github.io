@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Artisan Sourdough</title>
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="site-header">
+        <!-- Same navigation as other pages -->
+        <nav class="nav-main">
+            <div class="logo">
+                <h1>Artisan Sourdough</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="menu.html">Menu</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="menu-controls">
+            <h2>Our Breads</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="classic">Classic</button>
+                <button class="filter-btn" data-filter="specialty">Specialty</button>
+                <button class="filter-btn" data-filter="seasonal">Seasonal</button>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="searchBreads" placeholder="Search our breads...">
+            </div>
+        </section>
+
+        <section class="bread-grid">
+            <div class="bread-card" data-category="classic">
+                <!-- TODO: Add classic-sourdough.jpg -->
+                <h3>Classic Sourdough</h3>
+                <p>Our signature loaf with a perfectly crispy crust and tender crumb.</p>
+                <span class="price">$8</span>
+            </div>
+
+            <div class="bread-card" data-category="specialty">
+                <!-- TODO: Add rosemary-olive.jpg -->
+                <h3>Rosemary Olive</h3>
+                <p>Fresh rosemary and Kalamata olives folded into our classic dough.</p>
+                <span class="price">$9</span>
+            </div>
+
+            <div class="bread-card" data-category="specialty">
+                <!-- TODO: Add walnut-raisin.jpg -->
+                <h3>Walnut Raisin</h3>
+                <p>Sweet raisins and toasted walnuts in a honey-enriched dough.</p>
+                <span class="price">$9</span>
+            </div>
+
+            <div class="bread-card" data-category="seasonal">
+                <!-- TODO: Add pumpkin-spice.jpg -->
+                <h3>Pumpkin Spice</h3>
+                <p>Fall favorite with roasted pumpkin and warm autumn spices.</p>
+                <span class="price">$10</span>
+            </div>
+        </section>
+
+        <section class="ordering-info">
+            <h2>How to Order</h2>
+            <div class="order-steps">
+                <div class="step">
+                    <h3>1. Choose Your Bread</h3>
+                    <p>Browse our selection and pick your favorites.</p>
+                </div>
+                <div class="step">
+                    <h3>2. Place Your Order</h3>
+                    <p>Order 24 hours in advance for next-day pickup.</p>
+                </div>
+                <div class="step">
+                    <h3>3. Pick Up Fresh</h3>
+                    <p>Collect your fresh-baked bread during business hours.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <!-- Same footer as other pages -->
+    </footer>
+
+    <script src="scripts/project.js"></script>
+</body>
+</html>

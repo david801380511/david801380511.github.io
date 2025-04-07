@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Artisan Sourdough</title>
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-main">
+            <div class="logo">
+                <h1>Artisan Sourdough</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="menu.html">Menu</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="gallery-intro">
+            <h2>Our Bread Gallery</h2>
+            <p>Experience the artistry of our handcrafted sourdough through these images.</p>
+        </section>
+
+        <section class="gallery-grid">
+            <h2 class="visually-hidden">Gallery Images</h2>
+            <div class="gallery-item" data-category="process">
+                <img src="../images/mixing.jpg" alt="Mixing the dough" class="gallery-img">
+                <div class="gallery-caption">The mixing process</div>
+            </div>
+            <div class="gallery-item" data-category="finished">
+                <img src="../images/classic-loaf.jpg" alt="Classic sourdough loaf" class="gallery-img">
+                <div class="gallery-caption">Our signature classic loaf</div>
+            </div>
+            <div class="gallery-item" data-category="process">
+                <img src="../images/shaping.jpg" alt="Shaping the dough" class="gallery-img">
+                <div class="gallery-caption">Shaping technique</div>
+            </div>
+            <div class="gallery-item" data-category="finished">
+                <img src="../images/crumb-shot.jpg" alt="Perfect crumb structure" class="gallery-img">
+                <div class="gallery-caption">The perfect crumb</div>
+            </div>
+        </section>
+
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <img class="lightbox-content" id="lightbox-img" src="images/placeholder.jpg" alt="Enlarged gallery image">
+            <div id="lightbox-caption"></div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Visit Us</h3>
+                <p>123 Bakery Street</p>
+                <p>Charlotte, NC 28205</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/project.js"></script>
+</body>
+</html>
