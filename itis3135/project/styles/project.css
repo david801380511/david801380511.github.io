@@ -306,7 +306,7 @@ select {
     margin: 0;
 }
 
-.form-group:has(label.newsletter-checkbox) {
+.newsletter-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -717,4 +717,81 @@ button:hover {
     .gallery-wrapper {
         grid-template-columns: 1fr;
     }
+}
+
+/* FAQ styles */
+.faq-section {
+    margin: 2rem 0;
+    max-width: 700px;
+}
+.faq-item {
+    margin-bottom: 1rem;
+}
+.faq-question {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.faq-question:hover {
+    background: var(--accent-color);
+    color: #fff;
+}
+.faq-answer {
+    background: #fff8f0;
+    color: var(--text-color);
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+    border: 1px solid var(--secondary-color);
+    border-top: none;
+    margin-top: -5px;
+    display: none;
+    font-size: 1rem;
+}
+
+/* Dark theme toggle - using specific selectors for better specificity */
+html[data-theme="dark"] body {
+    background: #222;
+    color: #eee;
+}
+
+html[data-theme="dark"] .main-content,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .faq-answer,
+html[data-theme="dark"] .value-card,
+html[data-theme="dark"] .product-card,
+html[data-theme="dark"] .bread-card {
+    background: #2a2a2a;
+    color: #eee;
+}
+
+html[data-theme="dark"] .faq-question {
+    background: #444;
+    color: #fff;
+}
+
+html[data-theme="dark"] .faq-answer {
+    background: #333;
+    color: #fff;
+}
+
+html[data-theme="dark"] .site-header,
+html[data-theme="dark"] .site-footer {
+    background: #111;
+    color: #eee;
+}
+
+html[data-theme="dark"] .nav-links a {
+    color: #fff;
+}
+
+html[data-theme="dark"] .nav-links .active {
+    background: #333;
+    color: #fff;
 }

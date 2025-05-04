@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterBtns = document.querySelectorAll('.filter-btn');
     if (filterBtns) {
         filterBtns.forEach((btn) => {
-            btn.addEventListener('click', function() {
-                const category = this.dataset.filter;
+            btn.addEventListener('click', () => {
+                const category = btn.dataset.filter;
                 filterBreadItems(category);
             });
         });
@@ -140,6 +140,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // FAQ toggle
+    document.querySelectorAll('.faq-question').forEach((btn) => {
+        btn.addEventListener('click', function() {
+            const answer = this.nextElementSibling;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        });
+    });
+
+    // Theme toggle
+    const themeBtn = document.getElementById('theme-toggle');
+    if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+            const html = document.documentElement;
+            const isDark = html.getAttribute('data-theme') === 'dark';
+            html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+        });
+    }
 });
 
 // Image gallery lightbox
